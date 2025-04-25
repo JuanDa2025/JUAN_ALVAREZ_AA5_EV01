@@ -1,0 +1,150 @@
+/* Fondo animado */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(-45deg, #ffe6e6, #fff0cc, #ffd6e0, #d0f0c0);
+  background-size: 400% 400%;
+  animation: moverFondo 15s ease infinite;
+  color: #333;
+}
+
+@keyframes moverFondo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  background: #ff5e5e;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+/* Logo con animación */
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  animation: rebotar 2s infinite ease-in-out;
+}
+
+@keyframes rebotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.item {
+  background: #fff;
+  border-radius: 15px;
+  width: 240px;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.item h3 {
+  margin: 0.5rem 0;
+  color: #222;
+}
+
+.item p {
+  margin: 0.5rem 0 1rem;
+  font-weight: bold;
+}
+
+.item button {
+  background-color: #ff5e5e;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.item button:hover {
+  background-color: #ff3333;
+}
+
+.cart {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  margin: 1rem auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  max-width: 600px;
+}
+
+.cart h2 {
+  margin-top: 0;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.4rem;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+}
+
+.remove-btn {
+  background-color: #aaa;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #777;
+}
+
+#total {
+  font-size: 1.2rem;
+}
